@@ -7,6 +7,7 @@ const concat = require('gulp-concat');
 const order = require("gulp-order");
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
+const mainBowerFiles = require('main-bower-files');
 
 
 gulp.task('css', function () {
@@ -53,10 +54,30 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest('./build/fonts'))
 })
 
+gulp.task('libs', function() {
+    return gulp.src(mainBowerFiles({
+        'overrides': {
+            'jquery': {
+                'main': 'dist/jquery.min.js'
+            },
+            'inputmask': {
+                'main': [
+                    'css/inputmask.css',
+                    'dist/min/jquery.inputmask.bundle.min.js'
+                ]
+            },
+            'jquery-validation': {
+                'main': 'dist/jquery.validate.min.js'
+            }
+        }
+    }))
+        .pipe(gulp.dest('./build/libs'))
+});
+
 gulp.task('watcher', function () {
     gulp.watch('./src/less/*.less', gulp.series('css'))
     gulp.watch('./src/*.html', gulp.series('html'))
     gulp.watch('./src/js/*.js', gulp.series('js'))
 })
 
-gulp.task('build', gulp.parallel('html', 'css', 'js', 'img', 'fonts'))
+gulp.task('build', gulp.parallel('html', 'css', 'js', 'img', 'fonts', 'libs'))
