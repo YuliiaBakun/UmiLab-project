@@ -1,3 +1,3 @@
-const a = 15;
-const b = 10;
-const c = 25;
+const header = document.querySelector('.header');
+const headerHeight = header.offsetHeight;
+const stickyHeader = document.querySelector('.sticky-header');

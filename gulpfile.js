@@ -7,13 +7,11 @@ const concat = require('gulp-concat');
 const order = require("gulp-order");
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
-// const sourcemaps = require('gulp-sourcemaps');
 
 
 gulp.task('css', function () {
     return gulp.src('./src/less/style.less')
         .pipe(plumber())
-        // .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(autoprefixer({
             browsers: ['last 1 versions'],
@@ -23,7 +21,6 @@ gulp.task('css', function () {
             restructure: false,
             sourceMap: true
         }))
-        // .pipe(sourcemaps.write())
         .pipe(gulp.dest('./build/css'))
 })
 
