@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="libs/inputmask.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -35,7 +36,7 @@
         </header>
         <div class="banner" style="background-image: url(img/Rectangle.jpg)"></div>
         <section class="describing-block">
-            <div class="describing-container">
+            <div class="describing-container" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
                 <div class="describing-item">
                     <span>Прокачиваем мир</span>
                     <p>Вы хотите сделать мир лучше и не готовы ждать всю жизнь, чтобы начать это делать?
@@ -96,21 +97,21 @@
             <div class="container">
                 <h3 class="h3 h3--black">Приемущества работы с нами</h3>
                 <div class="advantages">
-                    <div class="advantages-item">
+                    <div class="advantages-item"  data-aos="flip-left" data-aos-duration="800" data-aos-delay="70">
                         <img src="img/Vector.png" alt="иконка">
                         <h4 class="h4">Делимся опытом и навыками</h4>
                         <p class="site-text">Мы обучаем коллег всему, что знаем сами. Наш опыт уникален и проверен
                             временем,
                             а команда постоянно совершенствует свои знания и навыки.</p>
                     </div>
-                    <div class="advantages-item">
+                    <div class="advantages-item"  data-aos="flip-left" data-aos-duration="1100"data-aos-delay="100">
                         <img src="img/Vector.png" alt="иконка">
                         <h4 class="h4">Стабильная зарплата</h4>
                         <p class="site-text">Вы без задержек получаете официальную зарплату. Также мы оплачиваем
                             больничные
                             и даем возможность брать оплачиваемый отпуск до 4 недель в год.</p>
                     </div>
-                    <div class="advantages-item">
+                    <div class="advantages-item"  data-aos="flip-left" data-aos-duration="1400" data-aos-delay="130">
                         <img src="img/Vector.png" alt="иконка">
                         <h4 class="h4">Гибкий график</h4>
                         <p class="site-text">Мы умеем работать с теми, кто еще не закончил получать образование. Вы
@@ -165,7 +166,13 @@
     <script src="libs/jquery.min.js"></script>
     <script src="libs/jquery.inputmask.bundle.min.js"></script>
     <script src="libs/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
