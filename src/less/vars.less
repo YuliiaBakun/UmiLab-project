@@ -6,3 +6,26 @@
 @footerBg: #161616;
 @contentBg: #F7F5FA;
 @buttonBg: #575757;
+
+.media-m(@rules) {
+    @media screen and (max-width: 972px) {
+      @rules();
+    }
+};
+
+.media-s(@rules) {
+    @media screen and (max-width: 768px) {
+      @rules();
+    }
+};
+
+.media-xs(@rules) {
+    @media screen and (max-width: 500px) {
+      @rules();
+    }
+};
+
+.placeholder-style() {
+    color:@white;
+    opacity: 0.3;
+}
